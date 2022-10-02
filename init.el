@@ -7,6 +7,7 @@
 (setq visible-bell t)
 (setq-default truncate-lines t)
 (setq display-line-numbers-type 'relative)
+(setq default-directory "~/")
 
 (set-face-attribute 'default (selected-frame) :height afk/default-font-size)
 (tool-bar-mode afk/disabled)
@@ -22,8 +23,6 @@
 
 (set-fringe-mode afk/favorite-number)
 (column-number-mode afk/enabled)
-
-(load-theme 'wombat t)
 
 (require 'package)
 
@@ -42,6 +41,9 @@
 (setq use-package-always-ensure t)
 
 (use-package command-log-mode)
+
+(use-package zenburn-theme
+  :config (load-theme 'zenburn t))
 
 (use-package ace-window
   :bind (("C-x o" . ace-window))
