@@ -49,6 +49,9 @@
   :bind (("C-x o" . ace-window))
   :config (ace-window 1))
 
+(use-package company
+  :hook (prog-mode . company-mode))
+
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
@@ -143,5 +146,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(lsp-pyright lsp-mode evil-magit magit projectile helpful evil-collection evil ivy-rich counsel which-key rainbow-delimiters ace-window command-log-mode use-package)))
+   '(company lsp-pyright lsp-mode evil-magit magit projectile helpful evil-collection evil ivy-rich counsel which-key rainbow-delimiters ace-window command-log-mode use-package)))
 
